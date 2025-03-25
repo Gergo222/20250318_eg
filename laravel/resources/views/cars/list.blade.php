@@ -24,7 +24,13 @@
                                 <td>{{ $car->brand }}</td>
                                 <td>{{ $car->year }}</td>
                                 <td>{{ $car->service ? $car->service->name : "" }}</td>
-                                <td><a class="btn btn-warning" href="{{ route('cars.updateForm', ['car' => $car->id])}}">Módositás</a></td>
+                                <td class="d-flex flex-col"><a class="btn btn-warning" href="{{ route('cars.updateForm', ['car' => $car->id])}}">Módositás</a>
+                                    <form action="{{ route('cars.delete', ['car' => $car->id]) }}" method="POST">
+                                        @csrf()
+                                        @method("DELETE")
+                                        <button type="submit" class="btn btn-danger">Törlés</button>
+                                    </form>
+                            </td>
                             </tr>
                         @endforeach
                     @else
