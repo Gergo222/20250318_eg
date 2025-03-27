@@ -14,7 +14,7 @@ class Mechanic extends Model
         "service_id"
     ];
 
-    public function service()
+    public function services()
     {
         return $this->belongsTo(Service::class);
     }

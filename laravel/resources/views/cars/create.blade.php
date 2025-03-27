@@ -17,7 +17,7 @@
                     <label>Gyártási év</label>
                     <input type="text" name="year" class="form-group">
                 </div>
-                <button type="submit" class="btn btn-success mt-3">Létrhozás</button>
+                <button type="submit" class="btn btn-success mb-3">Létrhozás</button>
             </form>
         </div>
     </div>

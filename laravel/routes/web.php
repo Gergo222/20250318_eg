@@ -52,7 +52,7 @@ Route::group([
     "prefix" => "mechanics",
     "controller" => MechanicController::class
 ], function(){
-    Route::get("/", "list")->name("mechanics.createForm");
+    Route::get("/", "list")->name("mechanics.list");
     Route::get("/create", "createForm")->name("mechanics.createForm");
     Route::get("/update/{mechanic}", "updateForm")->name("mechanics.updateForm");
 
