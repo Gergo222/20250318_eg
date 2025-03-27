@@ -9,7 +9,7 @@ class ServiceController extends Controller
 {
     public function apiGet(){
         $services = Service::query()
-            ->with(["caes", "mechanics"])
+            ->with(["cars", "mechanics"])
             ->get();
         return response()->json($services);
     }

@@ -13,7 +13,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('cars', function (Blueprint $table) {
-            $table->bigInteger(Service::class, "service_id")
+            $table->bigInteger("service_id")
                 ->unsigned()
                 ->nullable()
                 ->change();
@@ -26,7 +26,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('cars', function (Blueprint $table) {
-            $table->bigInteger(Service::class, "service_id")
+            $table->bigInteger("service_id")
                 ->unsigned()
                 ->change();
         });

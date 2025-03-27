@@ -38,7 +38,7 @@ Route::group([
     "prefix" => "services",
     "controller" => ServiceController::class
 ], function(){
-    Route::get("/", "list")->name("services.createForm");
+    Route::get("/", "list")->name("services.list");
     Route::get("/create", "createForm")->name("services.createForm");
     Route::get("/update/{service}", "updateForm")->name("services.updateForm");
 

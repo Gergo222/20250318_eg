@@ -15,7 +15,7 @@ return new class extends Migration
         Schema::create('mechanics', function (Blueprint $table) {
             $table->id();
             $table->string("name");
-            $table->foreignIdFor(Service::class, "id")
+            $table->foreignIdFor(Service::class, "service_id")
                 ->constrained("services");
             $table->timestamps();
         });
